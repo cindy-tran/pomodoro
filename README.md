@@ -1,3 +1,1 @@
-# pomdoro
-# pomodoro
 # pomodoro
