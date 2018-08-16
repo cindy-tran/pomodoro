@@ -1,0 +1,66 @@
+body {
+    font-family: Lato, 'Arial';
+    background-color: #66CCFF;
+    color: black;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+
+}
+
+
+#break-section {
+    float: left;
+}
+
+#session-section {
+    float: right;
+}
+
+button {
+    border-radius: 30%;
+    font-size: 25px;
+    display: inline-block;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#time {
+    font-size: 20px;
+}
+.clear {
+    clear: both;
+}
+
+img {
+    max-width: 20%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+#session {
+    margin: 40px;
+    padding-bottom: 10px;
+    border: 15px solid white;
+    border-radius: 10px;
+}
+
+.control:hover {
+    background-color: pink;
+    cursor: pointer;
+}
+
+
+h1 { 
+    font-size: 60px;
+    color: white;
+}
+
+
+#mug {
+    max-width: 20%;
+}

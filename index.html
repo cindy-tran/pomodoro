@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Pomodoro Clock</h1>
+    <img src="file:///C:/Users/Peter/Desktop/tomato.png">
+    <div id="sections">
+        <div id="break-section">
+            <h2>Break Length</h2>
+            <button class="control" id="increaseBreak">↑</button>
+            <span id="break-length">5</span>
+            <button  class="control" id="decreaseBreak">↓</button>
+        </div>
+        <div id="session-section">
+            <h2>Session Length</h2>
+            <button class="control" id="increaseSession">↑</button>
+            <span id="session-length">25</span>
+            <button class="control" id="decreaseSession">↓</button>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="session">
+        <h2 id="state">Session</h2>
+        <div id="time">
+            <div id="timeDisplayed"></div>
+        </div>
+        <div id="controls">
+            <button class="control" id="play">►</button>
+            <button class = "control" id="pause">❚❚</button>
+            <button class="control" id="reset">↺</button> <button><img id="mug" class="control" src="file:///C:/Users/Peter/Desktop/mug.png"></button>
+
+        </div>
+    </div>
+</body>
+<script src="test.js"></script>
+
+</html>
