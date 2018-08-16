@@ -46,13 +46,13 @@ function timeDisplay(msg) {
 timeDisplay("00:00");
 var startTime = Date.now();
 var alarmOn = false;
+var sessionMax = 0; 
+
 var timer = new Pomodoro(function() {
+    console.log(minutes);
+    console.log(seconds);
+    console.log(sessionMax);
     if(alarmOn == false) {
-        if(seconds > 59) {
-            minutes++;
-            seconds=0;
-        }  
-        var sessionMax = 0; 
         var currentState = document.getElementById("state").textContent;
         if (currentState == "Break") {
             sessionMax = parseInt(document.getElementById("break-length").textContent);
@@ -60,6 +60,15 @@ var timer = new Pomodoro(function() {
         else {
             sessionMax = parseInt(document.getElementById("session-length").textContent);
         }
+        if (parseInt(minutes) == sessionMax && parseInt(seconds) == 0) {
+            alert("Session is over!");
+            alarmOn = true;
+        }
+        if(seconds == 59) {
+            minutes++;
+            seconds=0;
+        }  
+
 
         if (minutes < 10) {
             minTime = "0" + minutes;
@@ -71,13 +80,6 @@ var timer = new Pomodoro(function() {
             timeDisplay(minTime + ":" + seconds++);
         }
 
-    }
-    console.log(sessionMax);
-    console.log(minutes);
-    console.log(seconds);
-    if (parseInt(minutes) == sessionMax && parseInt(seconds) == 0) {
-        alert("Session is over!");
-        alarmOn = true;
     }
 
 }, 1000);
